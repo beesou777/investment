@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+html,
+body {
+  background: #f1f1f1;
+  font-family: "Arimo", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px;
+  text-wrap: balance;
+  overflow-x: hidden;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.03rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025rem;
+  width: fit-content;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  letter-spacing: -0.02rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.03rem;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.body-1 {
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.body-bold {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.text-small {
+  font-size: 15px;
+  line-height: 1.25rem;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 1rem;
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.border-bottom {
+  border-bottom: 3px solid #86efac;
+  padding-bottom: 8px;
+  width: fit-content;
+  margin: auto;
+}
