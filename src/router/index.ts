@@ -58,6 +58,11 @@ const routes = [
     name: "privacy-policy",
     component: () => import("../views/TermAndCondition.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not-found",
+    component: () => import("../views/NotFound.vue"),
+  },
 ]
 
 const router = createRouter({

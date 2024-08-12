@@ -3,18 +3,12 @@
     <div class="flex justify-center">
       <img src="../assets//img/Hero.png" alt="hero image" width="100%" />
     </div>
-    <AboutUsSection />
-    <!-- <InvestmentFocus /> -->
-    <Vision />
-    <TestimonialDisplay />
+    <home/>
   </div>
 </template>
 
 <script setup lang="ts">
-import InvestmentFocus from "@/components/InvestmentFocus.vue";
-import Vision from "@/components/About/Vision.vue";
-import TestimonialDisplay from "@/components/Home/Testimonials/TestimonialDisplay.vue";
-import AboutUsSection from "@/components/Home/AboutUsSection.vue";
+import Home from "../components/Home/Main.vue";
 </script>
 
 <style lang="scss" scoped>

@@ -67,7 +67,6 @@
           <router-link to="{ name: 'privacy-policy' }" class="footer-link"
             >Privacy policy</router-link
           >
-          <a href="#" class="footer-link">Cookie policy</a>
         </nav>
       </div>
     </footer>
