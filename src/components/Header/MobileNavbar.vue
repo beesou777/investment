@@ -9,33 +9,36 @@
         @click="emit('toggleOverlay')"
       />
     </div>
-    <div class="overlay-content">
-      <ul class="menu rounded-box sm:text-lg">
-        <li><router-link :to="{ name: 'home' }">Home</router-link></li>
-        <li><router-link :to="{ name: 'about' }">About</router-link></li>
-        <li><router-link :to="{ name: 'blogs' }">Blog</router-link></li>
-        <li><router-link to="">Features</router-link></li>
-        <li>
-          <details>
-            <summary>Reports</summary>
-            <ul class="rounded-t-none">
-              <li><router-link to="">Annual Report</router-link></li>
-              <li><router-link to="">Quarterly Report</router-link></li>
-              <li><router-link to="">Weekly Report</router-link></li>
-            </ul>
-          </details>
-        </li>
-        <li><router-link to="">Announcements</router-link></li>
-        <li><router-link to="">Company</router-link></li>
-      </ul>
+    <div class="overlay-content  flex flex-col w-fit px-10">
+      <router-link
+      v-for="(item, index) in routeData"
+      :key="index"
+      @click="emit('toggleOverlay')"
+      class="py-2 hover:text-primary text-start h4  text-gray-950 capitalize relative after:content-[''] after:w-0 after:absolute after:h-[2px] hover:after:w-full after:bg-primary after:bottom-[4px] after:left-0 hover:after:duration-300"
+      :class="{ 'text-primary': route.name == item}"
+      :to="{ name: item }"
+      >{{ item }}</router-link
+    >
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import { brandLogo } from "../../../utils/index.ts";
 import { XMarkIcon } from "@heroicons/vue/16/solid";
+import { useRoute } from "vue-router";
 
 const emit = defineEmits(["toggleOverlay"]);
+
+const route = useRoute();
+
+const routeData : readonly string[] = [
+  "home",
+  "about",
+  "service",
+  "faq",
+  "blogs",
+  "contact",
+];
 </script>
 
 <style scoped>

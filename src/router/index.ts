@@ -51,12 +51,12 @@ const routes = [
   {
     path: "/terms-and-conditions",
     name: "terms-and-conditions",
-    component: () => import("../views/PrivacyPolicy.vue"),
+    component: () => import("../views/TermAndCondition.vue"),
   },
   {
     path: "/privacy-policy",
     name: "privacy-policy",
-    component: () => import("../views/TermAndCondition.vue"),
+    component: () => import("../views/PrivacyPolicy.vue"),
   },
   {
     path: "/:pathMatch(.*)*",
