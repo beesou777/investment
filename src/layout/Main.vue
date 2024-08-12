@@ -3,20 +3,14 @@
     <!-- Header conent -->
     <div class="bg-white">
       <Marquee />
-      <div class="max-w-[1440px] mx-auto ">
+      <div class="max-w-[1440px] mx-auto">
         <Header />
       </div>
     </div>
     <!-- Main content -->
-    <div>
-      <div>
-        <RouterView />
-      </div>
-    </div>
-    <div>
-      <div class="max-w-[1440px] mx-auto">
-        <Footer />
-      </div>
+    <RouterView />
+    <div class="bg-[#f1f1f1]">
+      <Footer />
     </div>
   </div>
 </template>

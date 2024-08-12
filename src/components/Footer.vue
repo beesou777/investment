@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <footer class="footer px-1 lg:px-2 mb-4">
+  <div class="max-w-[1440px] mx-auto">
+    <footer class="footer px-1 lg:px-2 mb-4 py-10">
       <div class="footer-section">
         <img
           :src="brandLogo"
@@ -52,19 +52,20 @@
       <div class="footer-section">
         <span class="h6 uppercase">Company</span>
         <nav class="footer-nav">
-          <a href="#" class="footer-link">About us</a>
-          <a href="#" class="footer-link">Contact</a>
-          <a href="#" class="footer-link">Jobs</a>
-          <a href="#" class="footer-link">Press kit</a>
+          <router-link :to="{ name: 'about' }" href="#" class="footer-link">About us</router-link>
+          <router-link :to="{ name: 'blogs' }" href="#" class="footer-link">Blogs</router-link>
+          <router-link :to="{ name: 'faq' }" href="#" class="footer-link">Faqs</router-link>
+          <router-link :to="{ name: 'service' }" href="#" class="footer-link">Services</router-link>
+          <router-link :to="{ name: 'contact' }" href="#" class="footer-link">Contact</router-link>
         </nav>
       </div>
       <div class="footer-section">
         <span class="h6 uppercase">Legal</span>
         <nav class="footer-nav">
-          <router-link to="{ name: 'terms-and-conditions' }" class="footer-link"
+          <router-link :to="{ name: 'terms-and-conditions' }" class="footer-link"
             >Terms of use</router-link
           >
-          <router-link to="{ name: 'privacy-policy' }" class="footer-link"
+          <router-link :to="{ name: 'privacy-policy' }" class="footer-link"
             >Privacy policy</router-link
           >
         </nav>
@@ -104,8 +105,6 @@ import {
   facebookSVG,
   xSVG,
 } from "../../utils/index.ts";
-
-const year = new Date().getFullYear();
 </script>
 
 <style scoped>
