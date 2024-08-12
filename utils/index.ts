@@ -6,10 +6,10 @@ import map from "../src/assets/icons/map.png";
 import facebook from "../src/assets/icons/facebook.svg";
 import instagram from "../src/assets/icons/instagram.svg";
 import x from "../src/assets/icons/x.svg";
-import svg1 from "../src/assets/icons/svg-1.svg";
-import svg2 from "../src/assets/icons/svg-2.svg";
-import svg3 from "../src/assets/icons/svg-3.svg";
-import svg4 from "../src/assets/icons/svg-4.svg";
+import svg1 from "../src/assets/icons/square.svg";
+import svg2 from "../src/assets/icons/circle.svg";
+import svg3 from "../src/assets/icons/cross1.svg";
+import svg4 from "../src/assets/icons/cross2.svg";
 
 export const brandLogo = logo1;
 export const brandLogo2 = logo0;
