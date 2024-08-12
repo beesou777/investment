@@ -5,7 +5,7 @@
       <div class="">
         <img :src="herosectionImag" alt="" />
       </div>
-      <div class="bg-white flex flex-col justify-center items-start p-10">
+      <div class="bg-white flex flex-col justify-center items-start md:p-10">
         <h2 class="h1 leading-[1.1] max-w-[450px]">
           We’re here to safeguard what matters most to you
         </h2>

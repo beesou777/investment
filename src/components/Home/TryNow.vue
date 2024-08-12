@@ -27,7 +27,7 @@
         <img :src="item.icon" :alt="item.name" class="w-[70px] h-[60px]" />
       </div>
       <p class="py-4 h4 max-w-[230px] !font-extrabold text-pretty">{{ item.name }}</p>
-      <p class="font-medium flex items-center gap-2 py-4 translate-x-[-25%] group-hover:translate-x-0 duration-300">
+      <p class="font-medium flex items-center gap-2 py-4 md:translate-x-[-25%] group-hover:translate-x-0 duration-300">
         <span
           >Read More</span
         >
