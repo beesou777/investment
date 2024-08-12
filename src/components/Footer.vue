@@ -33,30 +33,23 @@
       <a class="link link-hover">Elements</a>
     </nav>
     <nav>
-      <h6 class="footer-title">Services</h6>
-      <a class="link link-hover">Branding</a>
-      <a class="link link-hover">Design</a>
-      <a class="link link-hover">Marketing</a>
-      <a class="link link-hover">Advertisement</a>
-    </nav>
-    <nav>
-      <h6 class="footer-title">Company</h6>
-      <a class="link link-hover">About us</a>
-      <a class="link link-hover">Contact</a>
-      <a class="link link-hover">Jobs</a>
-      <a class="link link-hover">Press kit</a>
+      <h6 class="footer-title">Menu</h6>
+      <router-link :to="{ name: 'about' }" class="link link-hover">About us</router-link>
+      <router-link :to="{ name: 'blogs' }" class="link link-hover">Blog</router-link>
+      <router-link :to="{ name: 'faq' }" class="link link-hover">Faq</router-link>
+      <router-link :to="{ name: 'service' }" class="link link-hover">services</router-link>
+      <router-link :to="{ name: 'contact' }" class="link link-hover">Contact</router-link>
     </nav>
     <nav>
       <h6 class="footer-title">Legal</h6>
        <router-link :to="{ name: 'terms-and-conditions' }" class="link link-hover">Terms of use</router-link>
       <router-link :to="{ name: 'privacy-policy' }" class="link link-hover">Privacy policy</router-link>
-      <a class="link link-hover">Cookie policy</a>
     </nav>
   </footer>
   <footer class="footer text-base-content border-base-300 border-t py-4">
     <aside class="grid-flow-col items-center">
       <p>
-        Copyright © {{ year }} - All right reserved by Finance Investment Ltd.
+        Copyright © {{ new Date().getFullYear() }} - All right reserved by Finance Investment Ltd.
       </p>
     </aside>
     <nav class="md:place-self-center md:justify-self-end">
@@ -85,5 +78,4 @@ import {
   facebookSVG,
 } from "../../utils/index.ts";
 
-const year = new Date().getFullYear();
 </script>
