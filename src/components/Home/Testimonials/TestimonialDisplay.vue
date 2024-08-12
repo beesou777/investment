@@ -16,7 +16,7 @@
         :modules="modules"
         class="mySwiper"
       >
-        <swiper-slide v-for="i in 5" :key="i">
+        <swiper-slide v-for="(i,index) in 5" :key="index">
           <TestimonialDetail />
         </swiper-slide>
       </swiper>
@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper/modules";
 import { ref } from "vue";

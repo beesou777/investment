@@ -1,11 +1,11 @@
 <template>
   <div class="max-w-[1440px] mx-auto px-[10px] py-10">
     <BlogGrid>
-      <BlogPost v-for="item in dataItems" :key="item" :item="item" />
+      <BlogPost v-for="(item,index) in dataItems" :key="index" :item="item" />
     </BlogGrid>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import BlogGrid from "@/components/Blog/BlogGrid.vue";
 import BlogPost from "@/components/Blog/BlogPost.vue";
 const dataItems = [

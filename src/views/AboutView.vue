@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import AboutUs from "@/components/About/AboutUs.vue";
 import Mission from "@/components/About/Mission.vue";
 import Vision from "@/components/About/Vision.vue";

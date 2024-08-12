@@ -31,7 +31,7 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { brandLogo } from "../../../utils/index.ts";
 import { XMarkIcon } from "@heroicons/vue/16/solid";
 

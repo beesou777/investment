@@ -5,7 +5,7 @@
       <p class="my-4 text-center">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="carousel carousel-center rounded-box w-full space-x-4">
-      <div class="carousel-item" v-for="item in carouselItems" :key="item">
+      <div class="carousel-item" v-for="(item,index) in carouselItems" :key="index">
         <div class="overlay-container">
           <div class="h-[400px] w-[300px]">
             <img
@@ -24,7 +24,7 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { reactive } from "vue";
 const carouselItems = reactive([
   {

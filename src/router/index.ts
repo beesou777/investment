@@ -1,6 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
+interface ImportMeta {
+  env: {
+    BASE_URL: string;
+  };
+}
 const routes = [
   {
     path: "/",
@@ -46,7 +51,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory((import.meta as any).env.BASE_URL),
   routes: routes,
   scrollBehavior(from, to, savedPosition) {
     if (savedPosition) {

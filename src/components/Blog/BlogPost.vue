@@ -1,6 +1,6 @@
 <template>
   <div class="blog-post flex flex-col w-full group">
-    <router-link :to="`/blog/${item.name}`">
+    <router-link :to="`/blog/${item?.name}`">
       <div class="aspect-[480/258] overflow-hidden rounded-[4px] bg-[#f5f5f5]">
         <img
           :src="item.imgUrl"
@@ -18,9 +18,12 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
-  item: Object,
+    item: {
+      type: Object,
+      default: () => ({ imgUrl: '', name: 'No Name', details: 'No Details' }),
+    },
 });
 </script>
 

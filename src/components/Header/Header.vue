@@ -35,7 +35,7 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import Navbar from "../Header/Navbar.vue";
 import { brandLogo } from "../../../utils/index.ts";
 import { ref } from "vue";

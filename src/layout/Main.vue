@@ -21,10 +21,9 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Marquee from "@/components/Marquee.vue";
 import Header from "@/components/Header/Header.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 
-<style lang="scss" scoped></style>

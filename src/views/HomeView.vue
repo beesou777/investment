@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import InvestmentFocus from "@/components/InvestmentFocus.vue";
 import Vision from "@/components/About/Vision.vue";
 import TestimonialDisplay from "@/components/Home/Testimonials/TestimonialDisplay.vue";

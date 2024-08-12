@@ -48,7 +48,7 @@
               :modules="modules"
               class="mySwiper"
             >
-              <swiper-slide v-for="team in teamData" :key="team">
+              <swiper-slide v-for="(team,index) in teamData" :key="index">
                 <div class="h-56 w-56 text-center bg-gray-200 rounded-lg team">
                   <img
                     :src="team.image"
@@ -69,7 +69,7 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper/modules";
 import { reactive, ref } from "vue";

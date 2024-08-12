@@ -1,7 +1,7 @@
 <template>
   <Main />
 </template>
-<script setup>
+<script setup lang="ts">
 import Main from "./layout/Main.vue";
 import "swiper/css";
 import "swiper/css/navigation";
