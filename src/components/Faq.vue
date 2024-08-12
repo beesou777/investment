@@ -7,8 +7,6 @@
       <div
         v-for="(faq, index) in faqData"
         :key="index"
-        data-reveal
-        v-scroll-reveal
         class="overflow-hidden border-b-2 last:border-b-0 py-3 !m-0"
       >
         <button
