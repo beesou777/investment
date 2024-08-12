@@ -48,8 +48,8 @@
     </nav>
     <nav>
       <h6 class="footer-title">Legal</h6>
-      <a class="link link-hover">Terms of use</a>
-      <a class="link link-hover">Privacy policy</a>
+       <router-link :to="{ name: 'terms-and-conditions' }" class="link link-hover">Terms of use</router-link>
+      <router-link :to="{ name: 'privacy-policy' }" class="link link-hover">Privacy policy</router-link>
       <a class="link link-hover">Cookie policy</a>
     </nav>
   </footer>

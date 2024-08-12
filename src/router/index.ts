@@ -48,6 +48,16 @@ const routes = [
     name: "faq",
     component: () => import("../views/FaqView.vue"),
   },
+  {
+    path: "/terms-and-conditions",
+    name: "terms-and-conditions",
+    component: () => import("../views/PrivacyPolicy.vue"),
+  },
+  {
+    path: "/privacy-policy",
+    name: "privacy-policy",
+    component: () => import("../views/TermAndCondition.vue"),
+  },
 ]
 
 const router = createRouter({
