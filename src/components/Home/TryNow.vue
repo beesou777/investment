@@ -1,9 +1,10 @@
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-2">
-    <div class="">
+  <div class="max-w-[1440px] mx-auto py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div>
       <p class="h6 text-muted">TRY NOW</p>
       <h2
-        class="lg:text-[57px] md:text-[45px] text-[30px] leading-[1.1] font-bold max-w-[620px]"
+        class="lg:text-[57px] md:text-[45px] text-[30px] leading-[1.1] font-extrabold max-w-[620px]"
       >
         Prosper and grow with our services
       </h2>
@@ -25,8 +26,8 @@
       <div class="flex justify-start py-4 overflow-hidden">
         <img :src="item.icon" :alt="item.name" class="w-[70px] h-[60px]" />
       </div>
-      <p class="py-2 h4">{{ item.name }}</p>
-      <p class="font-medium flex items-center gap-2 translate-x-[-25%] group-hover:translate-x-0 duration-300">
+      <p class="py-4 h4 max-w-[230px] !font-extrabold text-pretty">{{ item.name }}</p>
+      <p class="font-medium flex items-center gap-2 py-4 translate-x-[-25%] group-hover:translate-x-0 duration-300">
         <span
           >Read More</span
         >
@@ -47,6 +48,7 @@
         </svg>
       </p>
     </router-link>
+  </div>
   </div>
 </template>
 
@@ -84,4 +86,6 @@ const serviceData: readonly Services[] = [
     link: "https://i.pinimg.com/564x/08/31/2e/08312e96e86c9bfc560a82359b5d1412.jpg",
   },
 ];
+
+
 </script>

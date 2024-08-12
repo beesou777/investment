@@ -1,15 +1,43 @@
 <template>
-  <div class="max-w-[1440px] mx-auto px-[10px] py-10">
-    <BlogGrid>
-      <BlogPost v-for="(item,index) in dataItems" :key="index" :item="item" />
-    </BlogGrid>
+  <div class="max-w-[1440px] mx-auto md:py-10 py-5">
+    <p class="text-small !font-extrabold uppercase text-muted text-center">
+      from our blogs
+    </p>
+    <h2 class="h1 mx-auto py-5 leading-[1.1]">Recent News</h2>
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+      <router-link :to="`/blog/${item?.name}`" class="group" v-for="(item, index) in blogsData.slice(0, 3)" :key="index">
+        <div
+          class="aspect-[480/258] overflow-hidden rounded-[4px] bg-[#f5f5f5]"
+        >
+          <img
+            :src="item.imgUrl"
+            alt="blog1"
+            width="100%"
+            height="100%"
+            class="w-full aspect-[480/258] group-hover:scale-[1.1] object-cover duration-300 max-w-full h-auto"
+          />
+        </div>
+        <div class="text-pretty">
+          <p
+            class="body-2 group-hover:underline duration-300 font-bold mt-4 mb-0 text-gray-950 leading-[150%] text-pretty"
+          >
+            {{ item.name }}
+          </p>
+          <span class="text-pretty text-muted">{{ item.details }}</span>
+        </div>
+        </router-link>
+    </div>
   </div>
 </template>
-<script setup lang="ts">
-import BlogGrid from "@/components/Blog/BlogGrid.vue";
-import BlogPost from "@/components/Blog/BlogPost.vue";
 
-const dataItems = [
+<script setup lang="ts">
+interface Blog {
+  name: string;
+  details: string;
+  imgUrl: string;
+}
+
+const blogsData: readonly Blog[] = [
   {
     name: "Exploring the Wonders of Nature",
     details:

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <footer class="footer px-1 lg:px-2 mb-4">
+  <div class="max-w-[1440px] mx-auto">
+    <footer class="footer px-1 lg:px-2 mb-4 py-10">
       <div class="footer-section">
         <img
           :src="brandLogo"
@@ -104,8 +104,6 @@ import {
   facebookSVG,
   xSVG,
 } from "../../utils/index.ts";
-
-const year = new Date().getFullYear();
 </script>
 
 <style scoped>
