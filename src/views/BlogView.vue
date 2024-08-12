@@ -8,12 +8,8 @@
 <script setup lang="ts">
 import BlogGrid from "@/components/Blog/BlogGrid.vue";
 import BlogPost from "@/components/Blog/BlogPost.vue";
+import type { blogType } from "../types/type";
 
-interface blogType {
-  name: string;
-  details: string;
-  imgUrl: string;
-}
 const dataItems: blogType[] = [
   {
     name: "Exploring the Wonders of Nature",

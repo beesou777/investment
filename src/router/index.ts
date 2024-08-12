@@ -1,11 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-
-interface ImportMeta {
-  env: {
-    BASE_URL: string;
-  };
-}
+// import type {ImportMeta} from "../types/type";
 const routes = [
   {
     path: "/",

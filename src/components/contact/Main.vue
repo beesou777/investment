@@ -8,7 +8,11 @@
         :key="index"
       >
         <div class="">
-          <img :src="item.icons" alt="icon" class="w-[45px] mx-auto text-gray-950" />
+          <img
+            :src="item.icons"
+            alt="icon"
+            class="w-[45px] mx-auto text-gray-950"
+          />
         </div>
         <h2 class="py-3 h3 mx-auto">{{ item.title }}</h2>
         <p class="body-1">{{ item.desc1 }}</p>
@@ -42,9 +46,11 @@
     </div>
   </div>
   <div class="md:py-10 py-5">
-    <h2 class="h2 border-bottom text-center mx-auto md:mb-10 mb-5">Our Location</h2>
+    <h2 class="h2 border-bottom text-center mx-auto md:mb-10 mb-5">
+      Our Location
+    </h2>
     <iframe
-    class="outline-none"
+      class="outline-none"
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14130.74920371556!2d85.304718!3d27.696058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b47153008f%3A0xa68e5075b1ab1a17!2sDetech%20Solution%20Pvt%20Ltd!5e0!3m2!1sen!2snp!4v1723200834573!5m2!1sen!2snp"
       width="100%"
       height="500"
@@ -60,15 +66,7 @@ import contact_main_image from "../../assets/img/contact/contact-large-image.web
 import time_reporting from "../../assets/icons/time_reporting.svg";
 import location from "../../assets/icons/location.svg";
 import phone from "../../assets/icons/phone.svg";
-
-
-interface ContactHeader {
-  title: string;
-  desc1?: string;
-  desc2?: string;
-  desc3?: string;
-  icons: string;
-}
+import type { ContactHeader } from "../../types/type";
 
 const minimalData: readonly ContactHeader[] = [
   {

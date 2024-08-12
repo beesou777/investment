@@ -39,7 +39,9 @@
       ></div>
     </div>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 py-10 bg-[#f1f1f1]">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 py-10 bg-[#f1f1f1]"
+  >
     <div
       class="relative first:after:w-0 max-[1024px]:odd:after:w-0 max-[767px]:after:w-0 after:content-[''] after:absolute after:inset-0 after:w-[2px] after:bg-gray-200 after:h-[60px] after:top-[50%] after:translate-y-[-50%]"
       v-for="(item, index) in MileStoneData"
@@ -66,17 +68,7 @@ import service_1 from "../../assets/img/service/service-Image-1.webp";
 import service_2 from "../../assets/img/service/service-image-2.webp";
 import service_3 from "../../assets/img/service/service-image-3.webp";
 import service_4 from "../../assets/img/service/service-image-4.webp";
-
-interface Feature {
-  title: string;
-  desc: string;
-  image: string;
-}
-
-interface MileStone{
-  title: string;
-  data: number;
-}
+import type { Feature, MileStone } from "../../types/type";
 
 const featureData: readonly Feature[] = [
   {

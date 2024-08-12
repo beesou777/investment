@@ -96,23 +96,7 @@ import service_4 from "../../assets/img/service/service-image-4.webp";
 
 import about_us from "../../assets/img/service/home-2.webp";
 
-interface Service {
-  title: string;
-  desc: string;
-  imgLink?: string;
-  icons?: string;
-}
-
-interface Feature {
-  title: string;
-  desc: string;
-  image: string;
-}
-
-interface MileStone {
-  title: string;
-  data: number;
-}
+import type { Service, Feature, MileStone } from "../../types/type";
 
 const sercviceData: readonly Service[] = [
   {

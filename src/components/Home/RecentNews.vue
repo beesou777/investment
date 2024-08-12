@@ -31,13 +31,9 @@
 </template>
 
 <script setup lang="ts">
-interface Blog {
-  name: string;
-  details: string;
-  imgUrl: string;
-}
+import type { blogType } from "../../types/type";
 
-const blogsData: readonly Blog[] = [
+const blogsData: readonly blogType[] = [
   {
     name: "Exploring the Wonders of Nature",
     details:

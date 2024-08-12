@@ -57,12 +57,7 @@ import bullseye from "../../assets/icons/bullseye.svg";
 import guidance from "../../assets/icons/guidance.svg";
 import marketting_advertising from "../../assets/icons/marketting_advertising.svg";
 import handshake from "../../assets/icons/handshake.svg";
-
-interface Services {
-  name: string;
-  icon: string;
-  link: string;
-}
+import type { Services } from "../../types/type";
 
 const serviceData: readonly Services[] = [
   {
