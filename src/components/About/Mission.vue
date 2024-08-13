@@ -9,7 +9,7 @@
         <h3 class="h2 font-medium md:mt-8 text-pretty">
           Get insights from our CEO on the mission that guides our company
         </h3>
-        <div class="quote-container my-[20px] p-[20px] bg-[#f9f9f9]">
+        <div class="quote-container my-[20px] p-[20px] bg-accent">
           <blockquote class="quote text-lg">
             The only way to do great work is to love what you do.
           </blockquote>

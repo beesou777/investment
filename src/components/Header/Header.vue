@@ -1,8 +1,8 @@
 <template>
   <div class="flex justify-between h-[75px]">
-    <div class="flex items-center pl-1 lg:pl-2">
-      <img :src="brandLogo" alt="brandLogo" height="150" width="150" />
-    </div>
+    <router-link :to="{ name: 'home' }" class="flex items-center pl-1 lg:pl-2">
+      <img :src="brandLogo" alt="brandLogo" height="150" width="150" class="object-contain" />
+    </router-link>
 
     <Navbar />
 

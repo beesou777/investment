@@ -14,22 +14,26 @@
       About Us
     </h2>
   </div>
-  <div class="company-overview text-justify py-4 px-6 mt-4 max-w-[1440px] mx-auto">
-    <h1 class="font-bold">Finance Investment</h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam minus
-      officiis quia, vero atque illo illum ipsum, temporibus ipsam voluptatibus
-      corrupti perspiciatis. Facilis mollitia quidem obcaecati perspiciatis
-      dignissimos. Officiis, id. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Iusto facilis iste explicabo dolore sunt fugit optio
-      illum magnam repellat maxime enim, tempore quidem minus. Quisquam laborum
-      earum consequatur deserunt ad pariatur facilis repellendus. <br /><br />
-      Repudiandae saepe dolorem veritatis repellat harum exercitationem eveniet
-      provident dolores neque similique, dignissimos quisquam cumque ullam
-      laborum praesentium quasi. In ab ipsam dignissimos inventore repudiandae
-      nobis nam quia dolorem at ad? Voluptatum placeat blanditiis assumenda,
-      suscipit eius temporibus earum expedita, excepturi sunt est adipisci. At!
-    </p>
+  <div class=" bg-accent">
+    <div class="grid md:grid-cols-3 grid-cols-2 max-w-[1440px] mx-auto py-10 px-[10px">
+      <div class="">
+        <h2>Some words about</h2>
+        <p class="text-muted">Work with us</p>
+      </div>
+      <p class="text-muted">
+        Mellentesque habitant morbi tristique senectus et netus et malesuada
+        famesac turpis egestas. Ut non enim eleifend felis pretium feugiat.
+      </p>
+      <div class="text-muted">
+        <p>
+          Mellentesque habitant morbi tristique senectus et netus et malesuada
+          famesac turpis egestas. Ut non enim eleifend felis pretium feugiat.
+          Vivamus quis mi.
+        </p>
+        <h3 class="pt-6 text-primary h4">John Doe</h3>
+        <p>Director of finance</p>
+      </div>
+    </div>
   </div>
 </template>
 <style>
@@ -43,22 +47,5 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
-.company-overview {
-  background-image: linear-gradient(
-    to bottom,
-    #f3f4f6,
-    #f4f5f7,
-    #f5f7f8,
-    #f6f8f9,
-    #f7f9fa,
-    #f8fafb,
-    #fafafb,
-    #fbfbfc,
-    #fcfcfd,
-    #fdfdfd,
-    #fefefe,
-    #ffffff
-  );
 }
 </style>
