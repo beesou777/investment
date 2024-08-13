@@ -59,7 +59,7 @@
             {{ item.title }}
           </h2>
           <p
-            class="lg:text-[10em] md:text-[8em] text-[4em] m-0 leading-[1.1] text-[#24DB8E] opacity-20"
+            class="lg:text-[10em] md:text-[8em] text-[4em] m-0 leading-[1.1] font-extrabold text-[#24DB8E] opacity-20"
           >
             {{ item.data }}
           </p>

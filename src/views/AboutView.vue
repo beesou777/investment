@@ -1,8 +1,10 @@
 <template>
-  <div class="about py-10 max-w-[1440px] mx-auto px-[10px]">
-    <AboutUs />
+  <div class="about pb-10">
+     <AboutUs />
+   <div class="px-[10px]  max-w-[1440px] mx-auto">
     <Mission />
     <Vision />
+   </div>
     <Team />
   </div>
 </template>

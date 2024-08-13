@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 px-[50px]">
+  <div class="mt-20">
     <div class="my-4 text-center">
       <h2 class="mission-title mx-auto border-bottom">Our Mission</h2>
       <p class="my-4 text-gray-500">Lorem ipsum dolor sit amet consectetur.</p>

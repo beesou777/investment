@@ -1,81 +1,16 @@
 <template>
-  <div class="mt-20 xl:px-[50px]">
-    <div class="my-4 text-center">
-      <h2 class="mission-title mx-auto border-bottom">Our Team</h2>
-      <p class="my-4 text-gray-500">Lorem ipsum dolor sit amet consectetur.</p>
-    </div>
-    <div class="flex flex-col h-[600px]">
-      <div
-        class="upper bg-gray-100 h-full flex flex-col items-center justify-start pt-12"
-      >
-        <h3
-          class="h2 font-bold w-3/4 text-center tracking-wide max-w-[1024px] text-pretty"
-        >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Necessitatibus, sed.
-        </h3>
-        <p class="font-medium md:text-lg w-2/3 text-center mt-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-          laborum in sit sint exercitationem dignissimos voluptatem quis autem
-          magni ab.
-        </p>
-      </div>
-    </div>
+  <div class="mt-20 bg-accent py-10">
+      <custom-slider/>
   </div>
 </template>
-<script setup lang="ts">
 
-// const teamData = reactive([
-//   {
-//     name: "John Doe",
-//     role: "CEO & Founder",
-//     image:
-//       "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-//   },
-//   {
-//     name: "Jane Smith",
-//     role: "Chief Operating Officer",
-//     image:
-//       "https://i.pinimg.com/236x/fa/9c/4b/fa9c4bccfffa98a27009017c63c27d26.jpg",
-//   },
-//   {
-//     name: "Michael Johnson",
-//     role: "Chief Technology Officer",
-//     image:
-//       "https://t3.ftcdn.net/jpg/01/94/24/91/360_F_194249112_O0jR3G68zPz8w6mjFlSf0I0OaMB7tS8V.jpg",
-//   },
-//   {
-//     name: "Emily Davis",
-//     role: "Chief Financial Officer",
-//     image:
-//       "https://t3.ftcdn.net/jpg/03/14/32/38/360_F_314323821_Pt4As0BrvRpRC57YxI7Gbs9Fhguo3EG4.jpg",
-//   },
-//   {
-//     name: "Chris Brown",
-//     role: "Chief Marketing Officer",
-//     image:
-//       "https://t3.ftcdn.net/jpg/02/64/90/41/360_F_264904168_mW06VHEauhdScHJ9MZks2YIg1E7Y8TUz.jpg",
-//   },
-//   {
-//     name: "Amanda Wilson",
-//     role: "Chief Human Resources Officer",
-//     image:
-//       "https://t3.ftcdn.net/jpg/03/12/48/72/360_F_312487207_X2CH3IXzKk67bFSd9GbR3yMWDi6D9RTH.jpg",
-//   },
-//   {
-//     name: "David Martinez",
-//     role: "Chief Product Officer",
-//     image:
-//       "https://t3.ftcdn.net/jpg/02/45/59/93/360_F_245599357_jgQJpZ2v8apCHReMFGI3InleXBGsdEYs.jpg",
-//   },
-//   {
-//     name: "Sophia Lee",
-//     role: "Chief Customer Officer",
-//     image:
-//       "https://t3.ftcdn.net/jpg/03/15/47/83/360_F_315478308_5SGJw5hhGcZgRCHpWPIvE4Ty0yL9kK7H.jpg",
-//   },
-// ]);
+<script setup lang="ts">
+import CustomSlider from '../customerReview.vue';
+
 </script>
+
+
+
 <style scoped>
 .team {
   /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */

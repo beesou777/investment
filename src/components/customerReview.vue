@@ -2,45 +2,41 @@
   <div class="max-w-[1440px] mx-auto overflow-hidden relative">
     <p class="h6 text-center text-muted">Testimonials</p>
     <h2 class="h1 mx-auto">What our customers say</h2>
-    <div class="slides">
-      <transition-group name="slide" tag="div" class="overflow-hidden">
-        <div
-          v-for="(item, index) in customerReview"
-          :key="index"
-          v-show="index === active"
-        >
-          <div
-            class="py-10 text-center min-w-full transition-transform duration-300 cursor-pointer select-none"
+    <div class="slides" ref="slides">
+      <div
+        class="slide py-10 text-center transition-transform duration-300 cursor-pointer select-none"
+        v-for="(item, index) in customerReview"
+        :key="index"
+      >
+        <div class="flex justify-center py-5">
+          <svg
+            width="52"
+            height="52"
+            viewBox="0 0 102 102"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div class="flex justify-center py-5">
-              <svg
-                width="52"
-                height="52"
-                viewBox="0 0 102 102"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M46.4169 18.1399L46.4169 50.907L26.9101 82.1399H10.0334L25.0471 52.8796H10.0334L10.0334 18.1399L46.4169 18.1399ZM90.5813 18.1399L90.5813 50.907L71.4032 82.1399H54.0882L69.4306 52.8796L54.0882 52.8796L54.0882 18.1399L90.5813 18.1399Z"
-                  fill="#54be73"
-                />
-              </svg>
-            </div>
-            <p class="body-1 mx-auto max-w-[720px] !font-medium text-pretty">
-              {{ item.review }}
-            </p>
-            <p class="text-pretty body-1 !font-bold pt-5">
-              {{ item.name }}
-            </p>
-            <p class="text-pretty body-1 text-muted">
-              {{ item.position }}
-            </p>
-          </div>
+            <path
+              d="M46.4169 18.1399L46.4169 50.907L26.9101 82.1399H10.0334L25.0471 52.8796H10.0334L10.0334 18.1399L46.4169 18.1399ZM90.5813 18.1399L90.5813 50.907L71.4032 82.1399H54.0882L69.4306 52.8796L54.0882 52.8796L54.0882 18.1399L90.5813 18.1399Z"
+              fill="#54be73"
+            />
+          </svg>
         </div>
-      </transition-group>
+        <p
+          class="body-1 mx-auto lg:max-w-[720px] md:max-w-[500px] max-w-[420px] !font-medium text-pretty px-[20px]"
+        >
+          {{ item.review }}
+        </p>
+        <p class="text-pretty body-1 !font-bold pt-5">
+          {{ item.name }}
+        </p>
+        <p class="text-pretty body-1 text-muted">
+          {{ item.position }}
+        </p>
+      </div>
     </div>
     <span
-      class="prev left-0 flex justify-center items-center absolute top-[50%] w-[50px] h-[50px] border-2 border-primary text-primary rounded-full cursor-pointer"
+      class="prev sm:left-[20px] right-[40px] flex justify-center items-center absolute md:top-[50%] top-[40%] sm:w-[50px] w-[24px] sm:h-[50px] h-[24px] border-2 border-primary text-primary rounded-full cursor-pointer"
       @click="move(-1)"
     >
       <svg
@@ -60,7 +56,7 @@
       </svg>
     </span>
     <span
-      class="next right-0 flex justify-center items-center absolute top-[50%] w-[50px] h-[50px] border-2 border-primary text-primary rounded-full cursor-pointer"
+      class="next sm:right-[20px] right-[5px] flex justify-center items-center absolute md:top-[50%] top-[40%] sm:w-[50px] w-[24px] sm:h-[50px] h-[24px] border-2 border-primary text-primary rounded-full cursor-pointer"
       @click="move(1)"
     >
       <svg
@@ -91,9 +87,9 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, Ref } from "vue";
+import { ref } from "vue";
 
-const active: Ref<number> = ref(1);
+const active = ref(0);
 
 interface Review {
   review: string;
@@ -130,24 +126,26 @@ const customerReview: readonly Review[] = [
 
 const jump = (index: number) => {
   active.value = index;
+  scrollToSlide(index);
 };
 
-const move = (amount: number) => {
-  const totalReviews = customerReview.length;
-  let newIndex = active.value + amount;
+const move = (direction: number) => {
+  const newIndex =
+    (active.value + direction + customerReview.length) % customerReview.length;
+  jump(newIndex);
+};
 
-  // Ensure the index loops back if it goes out of bounds
-  if (newIndex >= totalReviews) {
-    newIndex = 0; // Go back to the first review
-  } else if (newIndex < 0) {
-    newIndex = totalReviews - 1; // Go to the last review
-  }
-
-  active.value = newIndex;
+const scrollToSlide = (index: number) => {
+  const slides = document.querySelector(".slides") as HTMLDivElement;
+  const slideWidth = slides.clientWidth * index;
+  slides.scrollTo({
+    left: slideWidth,
+    behavior: "smooth",
+  });
 };
 </script>
-<style lang="scss" scoped>
 
+<style lang="scss" scoped>
 .prev,
 .next {
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -158,6 +156,9 @@ const move = (amount: number) => {
   }
   &:active {
     transform: translate(0, 3px) scale(1.2);
+    @media (max-width: 639px) {
+      transform: translate(0, 0) scale(1);
+    }
   }
 }
 
@@ -186,31 +187,19 @@ const move = (amount: number) => {
   }
 }
 
+.slides-container {
+  position: relative;
+}
+
 .slides {
-  font-size: 40px;
   display: flex;
-  height: 312px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  @media (min-width: 600px) {
-    font-size: 80px;
-  }
-
-  @media (min-width: 900px) {
-    font-size: 140px;
-  }
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 400ms;
-}
-.slide-enter-from,
-.slide-leave-to {
-  opacity: 0;
-  transform: translateX(50px);
-}
+  overflow: auto;
+  transition: transform 0.3s ease;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
+.slide {
+  min-width: 100%;
+}
 </style>
