@@ -80,13 +80,13 @@
       </div>
       <nav class="md:place-self-center md:justify-self-end">
         <div class="grid grid-flow-col gap-4">
-          <a>
+          <a href="#">
             <img :src="facebookSVG" alt="facebook" height="24" width="24" />
           </a>
-          <a>
+          <a href="#">
             <img :src="xSVG" alt="twitter" height="24" width="24" />
           </a>
-          <a>
+          <a href="#">
             <img :src="instagramSVG" alt="instagram" height="24" width="24" />
           </a>
         </div>
