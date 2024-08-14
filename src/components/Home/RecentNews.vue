@@ -5,7 +5,12 @@
     </p>
     <h2 class="h1 mx-auto py-5 leading-[1.1]">Recent News</h2>
     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-      <router-link :to="`/blog/${item?.name}`" class="group" v-for="(item, index) in blogsData.slice(0, 3)" :key="index">
+      <router-link
+        :to="`/blog/${item?.name}`"
+        class="group"
+        v-for="(item, index) in blogsData.slice(0, 3)"
+        :key="index"
+      >
         <div
           class="aspect-[480/258] overflow-hidden rounded-[4px] bg-[#f5f5f5]"
         >
@@ -25,7 +30,7 @@
           </p>
           <span class="text-pretty text-muted">{{ item.details }}</span>
         </div>
-        </router-link>
+      </router-link>
     </div>
   </div>
 </template>
@@ -33,48 +38,28 @@
 <script setup lang="ts">
 import type { blogType } from "../../types/type";
 
+import Blog_1 from "../../assets/img/blogs/blog-1.webp";
+import Blog_2 from "../../assets/img/blogs/blog-2.webp";
+import Blog_3 from "../../assets/img/blogs/blog-3.webp";
+
 const blogsData: readonly blogType[] = [
   {
     name: "Exploring the Wonders of Nature",
     details:
       "Discover the beauty of the natural world through breathtaking landscapes.",
-    imgUrl:
-      "https://i.pinimg.com/originals/6a/68/0f/6a680f6ddc6c46c7dabd2e6704ba9189.jpg",
+    imgUrl: Blog_1,
   },
   {
     name: "The Art of Culinary Delights",
     details:
       "Embark on a culinary journey with this blog post that explores gourmet recipes.",
-    imgUrl:
-      "https://i.pinimg.com/564x/65/ed/de/65edde4a6864e821cd97179499329f39.jpg",
+    imgUrl: Blog_2,
   },
   {
     name: "Tech Innovations Shaping the Future",
     details:
       "Dive into the latest advancements in technology and how they are transforming.",
-    imgUrl:
-      "https://i.pinimg.com/originals/07/51/2b/07512bdadcae01854bb600a60c30cb18.jpg",
-  },
-  {
-    name: "Traveling the World",
-    details:
-      "Join us on a global adventure as we explore top travel destinations.",
-    imgUrl:
-      "https://i.pinimg.com/originals/94/67/f4/9467f4513d12dc7c34a58138fc60a621.jpg",
-  },
-  {
-    name: "Mastering the Craft of Photography",
-    details:
-      "Unlock the secrets to capturing stunning photographs with tips on composition.",
-    imgUrl:
-      "https://i.pinimg.com/564x/d8/16/4a/d8164a7d91f58a8974b0b56ca38dbf1b.jpg",
-  },
-  {
-    name: "The Evolution of Modern Architecture",
-    details:
-      "Explore the journey of architectural design from classical styles to contemporary innovations.",
-    imgUrl:
-      "https://i.pinimg.com/originals/29/8f/99/298f99b004e924211657944e1eaf54f3.jpg",
+    imgUrl: Blog_3,
   },
 ];
 </script>

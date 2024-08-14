@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-[1440px] mx-auto px-[10px] md:py-10 py-5">
-    <h1 class="text-center border-bottom md:my-10 my-5">Contact</h1>
+  <div class="max-w-[1440px] mx-auto px-[10px] py-5">
+    <h1 class="text-center border-bottom md:mb-10 my-5">Contact</h1>
     <div class="md:pb-10 pb-5 grid md:grid-cols-3 grid-cols-1">
       <div
         class="text-center md:py-0 py-3"
@@ -39,13 +39,13 @@
       <div class="text-center py-10">
         <router-link
           :to="{ name: 'about' }"
-          class="bg-green-500 text-gray-950 font-medium px-10 py-4 duration-150 hover:bg-green-700"
+          class="bg-green-500 text-gray-950 font-medium px-10 py-4 duration-150 hover:bg-green-600"
           >Make an Appointment</router-link
         >
       </div>
     </div>
   </div>
-  <div class="md:py-10 py-5">
+  <div class="md:pt-10 pt-5">
     <h2 class="h2 border-bottom text-center mx-auto md:mb-10 mb-5">
       Our Location
     </h2>

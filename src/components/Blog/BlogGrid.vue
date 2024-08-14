@@ -1,10 +1,8 @@
 <template>
-  <div class="">
-    <h1 class="text-center md:my-10 my-5 border-bottom">Blogs</h1>
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-    <slot></slot>
-  </div>
-  </div>
+    <h1 class="text-center md:mb-10 my-5 border-bottom">Blogs</h1>
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+      <slot></slot>
+    </div>
 </template>
 <style scoped>
 .blog {

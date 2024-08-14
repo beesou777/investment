@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-[1440px] mx-auto md:p-[2rem] md:py-10 py-5" id="faqs">
-    <h1 class="font-bold md:my-10 my-5 text-center mb-6 px-3 border-bottom">
+  <div class="max-w-[1440px] mx-auto md:px-[2rem] py-5" id="faqs">
+    <h1 class="font-bold md:mb-10 my-5 text-center mb-6 px-3 border-bottom">
       FAQs
     </h1>
     <div class="space-y-4">

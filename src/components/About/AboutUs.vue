@@ -1,10 +1,10 @@
 <template>
-  <div class="relative max-h-[350px] h-full">
-    <img
-      src="https://www.teamagendas.com/wp-content/uploads/2022/10/staff-meeting-ideas.jpg"
-      alt="about us"
-      class="w-full max-h-[350px] h-full object-cover object-center"
-    />
+<div class="relative w-full md:aspect-[1920/350] aspect-[1920/500]">
+  <img
+    src="https://www.teamagendas.com/wp-content/uploads/2022/10/staff-meeting-ideas.jpg"
+    alt="about us"
+    class="w-full h-full object-cover object-center"
+  />
     <div
       class="bg-[rgba(0,0,0,0.3)] absolute top-0 left-0 min-h-full max-h-[350px] h-full w-full"
     ></div>

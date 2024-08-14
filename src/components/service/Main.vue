@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-[1440px] mx-auto md:pt-10 pt-5 px-[10px]">
-    <h1 class="text-center py-10 border-bottom">Our Services</h1>
+  <div class="max-w-[1440px] mx-auto md:pb-10 pt-5 px-[10px]">
+    <h1 class="text-center pb-10 border-bottom">Our Services</h1>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 py-10">
       <div v-for="(item, index) in sercviceData" :key="index">
         <div class="bg-white h-full rounded">
@@ -33,7 +33,7 @@
       <img
         :src="item.image"
         alt="Feature"
-        class="w-full h-full max-h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
+        class="w-full aspect-[200/300] h-full max-h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
       />
       <div
         class="absolute flex items-center justify-center bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 animation"
@@ -69,13 +69,21 @@
   </div>
   <div
     class="relative bg-center h-full"
-    :style="{ background: 'url(' + about_us + ')', backgroundSize: 'cover', backgroundPosition: 'center' }"
+    :style="{
+      background: 'url(' + about_us + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }"
   >
     <div class="md:py-[10rem] py-[6rem] text-center text-white">
       <h6 class="uppercase">Business Analytics</h6>
       <h2 class="h1 text-center mx-auto">Market analysis and innovation</h2>
       <div class="text-center py-10">
-        <router-link :to="{ name: 'about' }" class="bg-green-500 text-gray-950 font-medium px-10 py-4 duration-150 hover:bg-green-700">About us</router-link>
+        <router-link
+          :to="{ name: 'about' }"
+          class="bg-green-500 text-gray-950 font-medium px-10 py-4 duration-150 hover:bg-green-600"
+          >About us</router-link
+        >
       </div>
     </div>
   </div>

@@ -45,7 +45,7 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { squareSVG, circleSVG, cross1SVG, cross2SVG } from "../../utils/index";
 </script>
 

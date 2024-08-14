@@ -16,7 +16,7 @@
         <div class="text-center py-10">
           <router-link
             :to="{ name: 'service' }"
-            class="bg-green-500 text-gray-950 font-medium px-10 py-4 duration-150 hover:bg-green-700"
+            class="bg-green-500 text-gray-950 font-medium px-10 py-4 duration-150 hover:bg-green-600"
             >Get Started</router-link
           >
         </div>
