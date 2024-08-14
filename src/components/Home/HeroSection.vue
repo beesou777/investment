@@ -1,9 +1,9 @@
 <template>
   <div class="max-w-[1440px] mx-auto px-[10px]">
     <h1 class="lg:text-[67px] md:text-[48px] text-[36px] leading-[1.1] pb-5 tracking-wider uppercase">Your loyal guardian</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div class="">
-        <img :src="herosectionImag" alt="" />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-2">
+      <div class="lg:aspect-[690/550] aspect-[1] bg-gray-100">
+        <img :src="herosectionImag" alt="homepage" class="w-full h-full lg:aspect-[690/550] aspect-[1]" />
       </div>
       <div class="bg-white flex flex-col justify-center items-start md:p-10">
         <h2 class="h1 leading-[1.1] max-w-[450px]">

@@ -7,8 +7,14 @@
     >
       <img
         :src="item.image"
+        :srcset="`
+    ${item.image} 300w,
+    ${item.image} 500w,
+    ${item.image} 700w
+  `"
+        sizes="(max-width: 600px) 300px, (max-width: 1200px) 500px, 700px"
         alt="Feature"
-        class="w-full h-full max-h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
+        class="w-full h-full max-h-[500px] aspect-[500/550] object-cover transition-transform duration-300 group-hover:scale-105"
       />
       <div
         class="absolute bottom-[20px] left-[20px] group-hover:translate-y-[-20px] flex duration-300 group-hover:scale-100"
@@ -39,23 +45,17 @@
       ></div>
     </div>
   </div>
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 py-10 bg-[#f1f1f1]"
-  >
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 py-10 bg-[#f1f1f1]">
     <div
       class="relative first:after:w-0 max-[1024px]:odd:after:w-0 max-[767px]:after:w-0 after:content-[''] after:absolute after:inset-0 after:w-[2px] after:bg-gray-200 after:h-[60px] after:top-[50%] after:translate-y-[-50%]"
       v-for="(item, index) in MileStoneData"
       :key="index"
     >
       <div class="card-body py-0 items-center text-center">
-        <h2
-          class="card-title absolute top-[45%] font-[900] text-[16px] md:text-[28px] translate-y-[-50%]"
-        >
+        <h2 class="card-title absolute top-[50%] left-[50%] text-nowrap translate-x-[-50%] font-[900] text-[16px] md:text-[28px] translate-y-[-50%]">
           {{ item.title }}
         </h2>
-        <p
-          class="lg:text-[10em] md:text-[8em] text-[4em] m-0 leading-[1.1] text-[#24DB8E] opacity-20 font-black"
-        >
+        <p class="lg:text-[10em] md:text-[8em] text-[4em] m-0 leading-[1.1] text-[#24DB8E] opacity-20 font-black">
           {{ item.data }}
         </p>
       </div>
@@ -64,50 +64,50 @@
 </template>
 
 <script setup lang="ts">
-import service_1 from "../../assets/img/service/service-Image-1.webp";
-import service_2 from "../../assets/img/service/service-image-2.webp";
-import service_3 from "../../assets/img/service/service-image-3.webp";
-import service_4 from "../../assets/img/service/service-image-4.webp";
-import type { Feature, MileStone } from "../../types/type";
+import service_1 from '../../assets/img/service/service-Image-1.webp';
+import service_2 from '../../assets/img/service/service-image-2.webp';
+import service_3 from '../../assets/img/service/service-image-3.webp';
+import service_4 from '../../assets/img/service/service-image-4.webp';
+import type { Feature, MileStone } from '../../types/type';
 
 const featureData: readonly Feature[] = [
   {
-    title: "Affiliate Programs",
-    desc: "lorem ipsum ipsum ipsum",
+    title: 'Affiliate Programs',
+    desc: 'lorem ipsum ipsum ipsum',
     image: service_2,
   },
   {
-    title: "Business Opening",
-    desc: "lorem ipsum ipsum ipsum",
+    title: 'Business Opening',
+    desc: 'lorem ipsum ipsum ipsum',
     image: service_1,
   },
   {
-    title: "Financial Analysis",
-    desc: "lorem ipsum ipsum ipsum",
+    title: 'Financial Analysis',
+    desc: 'lorem ipsum ipsum ipsum',
     image: service_3,
   },
   {
-    title: "Bank Guarantees",
-    desc: "lorem ipsum ipsum ipsum",
+    title: 'Bank Guarantees',
+    desc: 'lorem ipsum ipsum ipsum',
     image: service_4,
   },
 ];
 
 const MileStoneData: readonly MileStone[] = [
   {
-    title: "Projects Completed",
+    title: 'Projects Completed',
     data: 90,
   },
   {
-    title: "people",
+    title: 'people',
     data: 30,
   },
   {
-    title: "Years",
+    title: 'Years',
     data: 10,
   },
   {
-    title: "Happy Clients",
+    title: 'Happy Clients',
     data: 200,
   },
 ];
