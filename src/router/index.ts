@@ -80,6 +80,14 @@ const routes = [
     },
     component: () => import("../views/NotFound.vue"),
   },
+  {
+    path: "/strategy",
+    name: "strategy",
+    meta:{
+      title: "Strategy",
+    },
+    component: () => import("../views/Strategy.vue"),
+  },
 ]
 
 const router = createRouter({
