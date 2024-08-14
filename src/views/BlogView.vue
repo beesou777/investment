@@ -10,9 +10,10 @@ import BlogGrid from "@/components/Blog/BlogGrid.vue";
 import BlogPost from "@/components/Blog/BlogPost.vue";
 import type { blogType } from "../types/type";
 
-import Blog_1 from "../../assets/img/blogs/blog-1.webp";
-import Blog_2 from "../../assets/img/blogs/blog-2.webp";
-import Blog_3 from "../../assets/img/blogs/blog-3.webp";
+import Blog_1 from "../assets/img/blogs/blog-1.webp";
+import Blog_2 from "../assets/img/blogs/blog-2.webp";
+import Blog_3 from "../assets/img/blogs/blog-3.webp";
+
 
 const dataItems: blogType[] = [
   {
