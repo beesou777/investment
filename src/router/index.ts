@@ -88,6 +88,12 @@ const routes = [
     },
     component: () => import("../views/Strategy.vue"),
   },
+  {
+    path: "/blog/:id",
+    name: "blog-detail",
+    props: true,
+    component: () => import("../views/BlogDetailView.vue"),
+  },
 ]
 
 const router = createRouter({

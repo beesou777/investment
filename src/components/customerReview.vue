@@ -173,7 +173,7 @@ const scrollToSlide = (index: number) => {
     width: 6px;
     height: 6px;
     border-radius: 3px;
-    background: #54be73;
+    background: theme("colors.primary");
     opacity: 0.2;
     display: inline-block;
     margin: 0 3px;
