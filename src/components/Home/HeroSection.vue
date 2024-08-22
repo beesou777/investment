@@ -26,5 +26,39 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from "vue";
+import axios from "axios";
 import herosectionImag from "../../assets/img/homepage/hero-section.webp";
+
+const data = ref<any[]>([]);
+
+const parseCSV = (csv: string) => {
+  const lines = csv.split("\n");
+  const headers = lines[0].split(",");
+  const result = lines.slice(1).map(line => {
+    const values = line.split(",");
+    return headers.reduce((obj, header, index) => {
+      obj[header.trim()] = values[index]?.trim();
+      return obj;
+    }, {} as Record<string, string>);
+  });
+  return result;
+};
+
+const fetchData = async () => {
+  try {
+    const response = await axios.get(
+      "https://docs.google.com/spreadsheets/d/1_DX0OHTzJUt0S9wBva-IcbTV9TpmdS5syqIIboP21vE/pub?gid=0&single=true&output=csv"
+    );
+    data.value = parseCSV(response.data);
+    console.log(data.value);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
+onMounted(() => {
+  fetchData();
+});
+
 </script>
