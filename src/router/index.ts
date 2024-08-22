@@ -80,6 +80,20 @@ const routes = [
     },
     component: () => import("../views/NotFound.vue"),
   },
+  {
+    path: "/strategy",
+    name: "strategy",
+    meta:{
+      title: "Strategy",
+    },
+    component: () => import("../views/Strategy.vue"),
+  },
+  {
+    path: "/blog/:id",
+    name: "blog-detail",
+    props: true,
+    component: () => import("../views/BlogDetailView.vue"),
+  },
 ]
 
 const router = createRouter({
